@@ -1,0 +1,158 @@
+* {
+    transition-duration: 600ms;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    .alert{
+        background-color: white;
+        color: black;
+        position: fixed;
+        width: 200px;
+        padding: 5px;
+        line-height: 2;
+    }
+    overflow-y: hidden;
+    background: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    .audio {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        .audio-block{
+            position: relative;
+            display: flex;
+            margin: auto;
+            .vanilla-plate{
+                position: absolute;
+                width: 450px;
+                height: 450px;
+                z-index: 4;
+                pointer-events: none;
+                animation-name: rotation;
+                animation-duration: 0s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                transition-duration: 600ms;
+            }
+            .album-img{
+                position: absolute;
+                z-index: 5;
+                background-size: cover;
+                height: 500px;
+                width: 500px;
+                pointer-events: none;
+            }
+            .player{
+                position:absolute;
+                color: black;
+                opacity: 0.3;
+                z-index: 6;
+                left: 100px;
+                top: 223px;               
+            }
+
+            audio::-webkit-media-controls-fullscreen-button {
+                display: flex;
+                opacity: 1;
+            }
+            .track-name{
+                font-size: 40px;
+                position: absolute;
+                z-index: 6;
+                left: 100px;
+                top: 100px;
+                color: white;
+                opacity: 0;
+                max-width: 440px;
+                width: auto;
+                span{
+                    font-size: 25px;
+                    margin-top: 40px;
+                }
+            }
+            .lirika{
+                font-size: 40px;
+                position: absolute;
+                z-index: 6;
+                left: 100px;
+                top: 100px;
+                color: white;
+                opacity: 0;
+                width: 440px;
+                span{
+                    font-size: 25px;
+                }
+            }
+            .player:hover {
+                opacity: 1;
+            }
+            
+            .content {
+                position: absolute;
+                width: 500px;
+                height: 500px;
+                background-color: #fe3d2e;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-end;
+                .text{
+                    width: 300px;
+                    height: 410px;
+                    float: right;
+                    padding: 30px;
+                    font-weight: 600;
+                    text-align: right;
+                    line-height: 2;
+                    opacity: 0;
+                    z-index: 10;
+                    a {
+                        color: inherit;
+                    }
+                }
+                .song-text {
+                    width: 300px;
+                    position: absolute;
+                    font-weight: 900;
+                    padding: 30px;
+                    text-align: center;
+                    line-height: 2;
+                    color: white;
+                    font-size: 25px;
+                    top: 20px;
+                    opacity: 0;
+                }
+                .date{
+                    text-align: center;
+                    padding: 5px;
+                    font-weight: 900;
+                    color: white;
+                    width: 100px;
+                    height: 30px;
+                    background-color: black;
+                    float: right;
+                    margin: 30px;
+
+                }
+            }
+        }
+    }
+    
+    
+    
+}
+
+@keyframes rotation {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}

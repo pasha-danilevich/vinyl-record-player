@@ -1,0 +1,165 @@
+* {
+  transition-duration: 600ms;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  overflow-y: hidden;
+  background: rgb(0, 0, 0);
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+body .alert {
+  background-color: white;
+  color: black;
+  position: fixed;
+  width: 200px;
+  padding: 5px;
+  line-height: 2;
+}
+body .audio {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+}
+body .audio .audio-block {
+  position: relative;
+  display: flex;
+  margin: auto;
+}
+body .audio .audio-block .vanilla-plate {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  z-index: 4;
+  pointer-events: none;
+  -webkit-animation-name: rotation;
+          animation-name: rotation;
+  -webkit-animation-duration: 0s;
+          animation-duration: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  transition-duration: 600ms;
+}
+body .audio .audio-block .album-img {
+  position: absolute;
+  z-index: 5;
+  background-size: cover;
+  height: 500px;
+  width: 500px;
+  pointer-events: none;
+}
+body .audio .audio-block .player {
+  position: absolute;
+  color: black;
+  opacity: 0.7;
+  z-index: 6;
+  left: 100px;
+  top: 223px;
+}
+body .audio .audio-block audio::-webkit-media-controls-fullscreen-button {
+  display: flex;
+  opacity: 1;
+}
+body .audio .audio-block .track-name {
+  font-size: 40px;
+  position: absolute;
+  z-index: 6;
+  left: 100px;
+  top: 100px;
+  color: white;
+  opacity: 0;
+  max-width: 440px;
+  width: auto;
+}
+body .audio .audio-block .track-name span {
+  font-size: 25px;
+  margin-top: 40px;
+}
+body .audio .audio-block .lirika {
+  font-size: 40px;
+  position: absolute;
+  z-index: 6;
+  left: 100px;
+  top: 100px;
+  color: white;
+  opacity: 0;
+  width: 440px;
+}
+body .audio .audio-block .lirika span {
+  font-size: 25px;
+}
+body .audio .audio-block .player:hover {
+  opacity: 1;
+}
+body .audio .audio-block .content {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: #fe3d2e;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+body .audio .audio-block .content .text {
+  width: 300px;
+  height: 410px;
+  float: right;
+  padding: 30px;
+  font-weight: 600;
+  text-align: right;
+  line-height: 2;
+  opacity: 0;
+  z-index: 10;
+}
+body .audio .audio-block .content .text a {
+  color: inherit;
+}
+body .audio .audio-block .content .song-text {
+  width: 300px;
+  position: absolute;
+  font-weight: 900;
+  padding: 30px;
+  text-align: center;
+  line-height: 2;
+  color: white;
+  font-size: 25px;
+  top: 20px;
+  opacity: 0;
+}
+body .audio .audio-block .content .date {
+  text-align: center;
+  padding: 5px;
+  font-weight: 900;
+  color: white;
+  width: 100px;
+  height: 30px;
+  background-color: black;
+  float: right;
+  margin: 30px;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */
